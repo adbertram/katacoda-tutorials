@@ -9,7 +9,7 @@ $provParams = @{
 $null = Install-PackageProvider @provParams
 $null = Import-PackageProvider @provParams
 
-$requiredModules = @('Pester', 'PSPostMan')
+$requiredModules = @('Pester')
 foreach ($m in $requiredModules) {
 	Write-Host "Installing module [$($m)]..."
 	Install-Module -Name $m -Force -Confirm:$false
